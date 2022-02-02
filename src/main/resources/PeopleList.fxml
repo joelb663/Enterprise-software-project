@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="62.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Label text="Search By Last Name:" />
+                  <TextField fx:id="searchBar" />
+                  <Button mnemonicParsing="false" onAction="#searchButton" text="Search" />
+               </children>
+            </HBox>
+            <ListView fx:id="list" onMouseClicked="#mouseClick" prefHeight="349.0" prefWidth="600.0" />
+            <VBox alignment="CENTER" prefHeight="150.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="resultLabel" text="Label" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="firstButton" mnemonicParsing="false" onAction="#firstButton" text="First" />
+                        <Button fx:id="previousButton" mnemonicParsing="false" onAction="#previousButton" text="Prev." />
+                        <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextButton" text="Next" />
+                        <Button fx:id="lastButton" mnemonicParsing="false" onAction="#lastButton" text="Last" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="62.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addPerson" text="Add Person" />
+                  <Button mnemonicParsing="false" onAction="#deleteButton" text="Delete Selected" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
